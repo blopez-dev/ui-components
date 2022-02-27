@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "strictNullChecks": true,
     "allowUnreachableCode": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
@@ -13,11 +14,11 @@
       "es2019"
     ],
     "importHelpers": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "outDir": "dist-transpiled",
     "declarationDir": "dist/types",
@@ -25,7 +26,7 @@
     "inlineSources": true,
     "sourceMap": true,
     "jsx": "react",
-    "target": "ES5",
+    "target": "es5",
     "allowJs": true,
     "types": [
       "react",
@@ -44,8 +45,10 @@
   ],
   "exclude": [
     "node_modules",
+    "build",
     ".eslintrc.js",
     "rollup.config.js",
+    "storybook-static",
     "src/**/*.stories.tsx"
   ],
   "references": [ { "path": "src", "prepend": true } ]
